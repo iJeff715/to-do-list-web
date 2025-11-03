@@ -1,0 +1,104 @@
+/* src/styles/Pagination.css */
+.pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.pagination-info {
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.page-number-btn {
+    min-width: 25px;
+    height: 35px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.page-number-btn.active {
+    font-weight: 600;
+}
+
+.page-ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    color: #6b7280;
+    font-weight: 500;
+    user-select: none;
+}
+
+.pagination-btn.prev-next-btn {
+    padding: 8px 16px !important;
+    min-width: 50px;
+}
+
+.items-per-page {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.items-per-page-select {
+    padding: 6px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.items-per-page-select:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .pagination-controls {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .page-numbers {
+        order: -1;
+    }
+    
+    .pagination-btn.prev-next-btn {
+        min-width: 120px;
+    }
+}
+
+/* Hover effects for page numbers */
+.page-number-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+}

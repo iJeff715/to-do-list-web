@@ -1,0 +1,125 @@
+/* src/styles/Button.css */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Primary Button (Default) */
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+  box-shadow: 0 2px 4px rgba(107, 114, 128, 0.3);
+}
+
+/* Danger Button */
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+/* Text Button */
+.btn-text {
+  background-color: transparent;
+  color: #6b7280;
+  box-shadow: none;
+  padding: 8px 12px;
+}
+
+/* Outline Buttons */
+.btn-outline {
+  background-color: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  box-shadow: none;
+}
+
+.btn-outline-pending {
+  background-color: transparent;
+  color: #f59e0b;
+  border: 2px solid #f59e0b;
+  box-shadow: none;
+}
+
+.btn-outline-completed {
+  background-color: transparent;
+  color: #22c55e;
+  border: 2px solid #22c55e;
+  box-shadow: none;
+}
+
+/* NEW: Pending Button (Orange/Yellow) */
+.btn-pending {
+  background-color: #f59e0b;
+  color: white;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+/* NEW: Completed Button (Green) */
+.btn-completed {
+  background-color: #22c55e;
+  color: white;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+}
+
+/* Hover effects for all buttons */
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific hover colors - Each button keeps its color theme */
+.btn-primary:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.btn-pending:hover:not(:disabled) {
+  background-color: #d97706;
+}
+
+.btn-completed:hover:not(:disabled) {
+  background-color: #16a34a;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+/* Outline button hovers - Each changes to its corresponding solid color */
+.btn-outline:hover:not(:disabled) {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-outline-pending:hover:not(:disabled) {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.btn-outline-completed:hover:not(:disabled) {
+  background-color: #22c55e;
+  color: white;
+}

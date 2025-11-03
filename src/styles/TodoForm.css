@@ -1,0 +1,22 @@
+/* src/styles/TodoForm.css */
+.todo-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.todo-input:focus {
+  border-color: #3b82f6;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
