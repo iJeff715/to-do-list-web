@@ -127,9 +127,9 @@
 /* Mobile*/
 @media (max-width: 768px) {
   .todo-app-container {
-    position: static; /* Allow page to scroll naturally */
-    min-height: 100vh;
-    overflow-y: auto;
+    padding: 0;
+    align-items: stretch;
+    overflow: scroll;
   }
   
   .todo-card {
