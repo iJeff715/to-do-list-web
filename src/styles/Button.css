@@ -123,3 +123,19 @@
   background-color: #22c55e;
   color: white;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 44px; /* Minimum touch target */
+    min-width: 44px;
+    padding: 12px 20px; /* Larger padding for mobile */
+    font-size: 16px; /* Prevent iOS zoom */
+    -webkit-tap-highlight-color: transparent; /* Remove blue tap highlight */
+  }
+  
+  .btn-text {
+    padding: 10px 12px !important;
+    min-height: 40px;
+  }
+}

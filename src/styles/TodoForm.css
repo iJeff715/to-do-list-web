@@ -20,3 +20,23 @@
   justify-content: flex-end;
   gap: 12px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .todo-input {
+    padding: 16px;
+    font-size: 16px; /* Prevent iOS zoom */
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-input {
+    padding: 18px 16px;
+    min-height: 54px;
+  }
+  
+  .form-actions {
+    gap: 8px;
+  }
+}

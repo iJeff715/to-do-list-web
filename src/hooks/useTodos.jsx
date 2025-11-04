@@ -10,7 +10,7 @@ export const useTodos = () => {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/todos?_limit=30")
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=100")
       .then((res) => setTodos(res.data))
       .catch((err) => console.error(err));
   }, []);

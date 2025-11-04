@@ -30,3 +30,38 @@
   font-size: 20px;
   font-weight: 600;
 }
+
+/* Mobile*/
+@media (max-width: 768px) {
+  .modal-overlay {
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  .modal-title {
+    font-size: 18px;
+  }
+}

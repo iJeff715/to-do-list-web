@@ -19,24 +19,28 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Changed from wrap to nowrap */
     justify-content: center;
+    width: 100%;
 }
 
 .page-numbers {
     display: flex;
     align-items: center;
     gap: 4px;
+    flex-wrap: nowrap; /* Ensure no wrapping */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .page-number-btn {
-    min-width: 25px;
+    min-width: 35px; /* Fixed width for consistency */
     height: 35px;
     padding: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .page-number-btn.active {
@@ -52,11 +56,13 @@
     color: #6b7280;
     font-weight: 500;
     user-select: none;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .pagination-btn.prev-next-btn {
     padding: 8px 16px !important;
     min-width: 50px;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .items-per-page {
@@ -82,23 +88,70 @@
     box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
 }
 
-/* Responsive design */
-@media (max-width: 640px) {
+/* Mobile adjustments - keep same layout but adjust sizes */
+@media (max-width: 768px) {
+    .pagination-container {
+        padding: 16px 0;
+    }
+    
     .pagination-controls {
-        flex-direction: column;
-        gap: 12px;
+        gap: 6px;
+        width: 100%;
+        overflow: hidden; /* Prevent horizontal overflow */
     }
     
     .page-numbers {
-        order: -1;
+        gap: 3px;
+    }
+    
+    .page-number-btn {
+        min-width: 32px;
+        height: 32px;
+        font-size: 14px;
     }
     
     .pagination-btn.prev-next-btn {
-        min-width: 120px;
+        padding: 8px 12px !important;
+        min-width: 45px;
+        min-height: 36px;
+    }
+    
+    .page-ellipsis {
+        min-width: 28px;
+        height: 28px;
     }
 }
 
-/* Hover effects for page numbers */
-.page-number-btn:hover:not(:disabled) {
-    transform: translateY(-1px);
+@media (max-width: 480px) {
+    .pagination-controls {
+        gap: 4px;
+    }
+    
+    .page-numbers {
+        gap: 2px;
+    }
+    
+    .page-number-btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+    
+    .pagination-btn.prev-next-btn {
+        padding: 6px 10px !important;
+        min-width: 40px;
+        min-height: 32px;
+        font-size: 14px;
+    }
+    
+    .page-ellipsis {
+        min-width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+
+/* Ensure the pagination never wraps to multiple lines */
+.pagination-controls > * {
+    flex-shrink: 0;
 }

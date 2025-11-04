@@ -55,3 +55,32 @@
     background-color: #fef2f2;
     border: 1px solid #fecaca;
 }
+
+/* Mobile*/
+@media (max-width: 768px) {
+    .search-input {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevent iOS zoom */
+        min-height: 50px;
+    }
+    
+    .clear-search-btn {
+        padding: 12px 14px !important;
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        padding: 16px 14px;
+    }
+    
+    .clear-search-btn {
+        padding: 14px 12px !important;
+        min-height: 54px;
+    }
+    
+    .search-input-group {
+        gap: 6px;
+    }
+}
